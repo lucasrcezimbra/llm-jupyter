@@ -17,3 +17,12 @@ def test_ipython_execute(tmpdir):
     assert result.exit_code == 0
     assert len(tmpdir.listdir()) == 1
     assert filepath.read() == "Hello World!"
+
+
+def test_ipython_help(capfd):
+    runner = CliRunner()
+
+    result = runner.invoke(cli, ["ipython", "help"])
+
+    captured = capfd.readouterr()
+    assert captured.out.startswith("=========\n IPython\n=========")

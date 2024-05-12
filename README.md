@@ -28,6 +28,7 @@ llm ipython --version
 Or to start a IPython shell. In that shell you can import `llm` and use it to interact with models:
 ```bash
 llm ipython
+```
 
 ```python
 In [1]: !llm 'Who are you?'

@@ -1,5 +1,5 @@
 [project]
-name = "llm-python"
+name = "llm-jupyter"
 version = "0.1"
 description = "Run a Python interpreter in the LLM virtual environment"
 readme = "README.md"
@@ -13,10 +13,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/simonw/llm-python"
-Changelog = "https://github.com/simonw/llm-python/releases"
-Issues = "https://github.com/simonw/llm-python/issues"
-CI = "https://github.com/simonw/llm-python/actions"
+Homepage = "https://github.com/lucasrcezimbra/llm-jupyter"
+Changelog = "https://github.com/lucasrcezimbra/llm-jupyter/releases"
+Issues = "https://github.com/lucasrcezimbra/llm-jupyter/issues"
+CI = "https://github.com/lucasrcezimbra/llm-jupyter/actions"
 
 [project.entry-points.llm]
 python = "llm_python"

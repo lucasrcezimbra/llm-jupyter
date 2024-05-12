@@ -3,7 +3,10 @@ name = "llm-jupyter"
 version = "0.0.2"
 description = "Run a IPython interpreter in the LLM virtual environment"
 readme = "README.md"
-authors = [{name = "Simon Willison"}]
+authors = [
+  {name = "Lucas Rangel Cezimbra", email="lucas@cezimbra.tec.br"},
+  {name = "Simon Willison"},
+]
 license = {text = "Apache-2.0"}
 classifiers = [
     "License :: OSI Approved :: Apache Software License"

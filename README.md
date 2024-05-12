@@ -34,8 +34,9 @@ To set up this plugin locally, first checkout the code. Then create a new virtua
 ```bash
 git clone git@github.com:lucasrcezimbra/llm-jupyter.git
 cd llm-jupyter
-python3 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
+pip install -e .[test]
 ```
 Now install the dependencies and test dependencies:
 ```bash

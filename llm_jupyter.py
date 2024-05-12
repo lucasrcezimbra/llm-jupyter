@@ -16,6 +16,4 @@ def register_commands(cli):
         """
         Run IPython interpreter, passing through any arguments
         """
-        cmd = [sys.executable]
-        cmd.extend(args)
-        subprocess.run(cmd)
+        subprocess.run(['ipython', *args])

@@ -1,6 +1,5 @@
 from llm.cli import cli
 from click.testing import CliRunner
-import tempfile
 
 
 def test_python_execute(tmpdir):

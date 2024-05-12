@@ -25,4 +25,13 @@ def test_ipython_help(capfd):
     result = runner.invoke(cli, ["ipython", "help"])
 
     captured = capfd.readouterr()
-    assert captured.out.startswith("=========\n IPython\n=========")
+    assert captured.out.startswith("=========\n IPython\n========")
+
+
+def test_jupyter(capfd):
+    runner = CliRunner()
+
+    result = runner.invoke(cli, ["notebook", "--help-all"])
+
+    captured = capfd.readouterr()
+    assert captured.out.startswith("Jupyter Notebook - A web-based notebook environment for interactive computing")

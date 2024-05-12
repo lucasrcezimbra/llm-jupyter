@@ -15,6 +15,7 @@ llm install llm-jupyter
 ```
 ## Usage
 
+### IPython
 This plugin adds a new `ipython` command to LLM. This executes IPython in the same virtual environment as LLM itself.
 
 You can use this to check the Python version
@@ -23,9 +24,27 @@ You can use this to check the Python version
 llm ipython --version
 # Should output '8.20.0' or similar
 ```
+
 Or to start a IPython shell. In that shell you can import `llm` and use it to interact with models:
 ```bash
 llm ipython
+
+```python
+In [1]: !llm 'Who are you?'
+# Output: I am an AI digital assistant here to help you with any questions or tasks you may have. How can I assist you today?
+```
+
+
+### Notebook
+This plugin also adds a new `notebook` command to LLM. This executes a Jupyter Notebook in the same virtual environment as LLM itself.
+
+```bash
+llm notebook
+```
+
+```python
+!llm 'Who are you?'
+# Output: I am an AI digital assistant here to help you with any questions or tasks you may have. How can I assist you today?
 ```
 
 ## Development

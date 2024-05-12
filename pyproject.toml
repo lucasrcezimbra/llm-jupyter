@@ -1,7 +1,7 @@
 [project]
 name = "llm-jupyter"
-version = "0.1"
-description = "Run a Python interpreter in the LLM virtual environment"
+version = "0.0.1"
+description = "Run a IPython interpreter in the LLM virtual environment"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
 license = {text = "Apache-2.0"}

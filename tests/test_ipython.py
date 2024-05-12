@@ -2,7 +2,7 @@ from llm.cli import cli
 from click.testing import CliRunner
 
 
-def test_python_execute(tmpdir):
+def test_ipython_execute(tmpdir):
     runner = CliRunner()
 
     # tmpdir should be empty
@@ -11,7 +11,7 @@ def test_python_execute(tmpdir):
     filepath = tmpdir / "test.txt"
 
     result = runner.invoke(
-        cli, ["python", "-c", f"open('{filepath}', 'w').write('Hello World!')"]
+        cli, ["ipython", "-c", f"open('{filepath}', 'w').write('Hello World!')"]
     )
 
     assert result.exit_code == 0

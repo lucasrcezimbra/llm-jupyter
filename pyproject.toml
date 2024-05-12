@@ -9,7 +9,8 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License"
 ]
 dependencies = [
-    "llm"
+    "ipython",
+    "llm",
 ]
 
 [project.urls]
@@ -19,7 +20,7 @@ Issues = "https://github.com/lucasrcezimbra/llm-jupyter/issues"
 CI = "https://github.com/lucasrcezimbra/llm-jupyter/actions"
 
 [project.entry-points.llm]
-python = "llm_python"
+python = "llm_jupyter"
 
 [project.optional-dependencies]
 test = ["pytest"]

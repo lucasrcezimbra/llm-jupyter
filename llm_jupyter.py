@@ -12,9 +12,9 @@ def register_commands(cli):
         )
     )
     @click.argument("args", nargs=-1, type=click.UNPROCESSED)
-    def python(args):
+    def ipython(args):
         """
-        Run Python interpreter, passing through any arguments
+        Run IPython interpreter, passing through any arguments
         """
         cmd = [sys.executable]
         cmd.extend(args)

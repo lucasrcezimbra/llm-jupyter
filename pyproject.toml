@@ -28,3 +28,9 @@ python = "llm_jupyter"
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+
+[tool.ruff]
+select = ["A", "B", "BLE", "E", "F", "I", "RUF", "SIM", "W"]
+ignore = ["E501"]
+line-length = 88

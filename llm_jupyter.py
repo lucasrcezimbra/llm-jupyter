@@ -1,11 +1,12 @@
+import subprocess
+
 import click
 import llm
-import subprocess
 
 
 @llm.hookimpl
 def register_commands(cli):
-    @cli.command(context_settings=dict(ignore_unknown_options=True))
+    @cli.command(context_settings={"ignore_unknown_options": True})
     @click.argument("args", nargs=-1, type=click.UNPROCESSED)
     def ipython(args):
         """
@@ -13,7 +14,7 @@ def register_commands(cli):
         """
         subprocess.run(["ipython", *args])
 
-    @cli.command(context_settings=dict(ignore_unknown_options=True))
+    @cli.command(context_settings={"ignore_unknown_options": True})
     @click.argument("args", nargs=-1, type=click.UNPROCESSED)
     def notebook(args):
         """

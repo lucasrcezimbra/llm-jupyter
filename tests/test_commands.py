@@ -1,5 +1,5 @@
-from llm.cli import cli
 from click.testing import CliRunner
+from llm.cli import cli
 
 
 def test_ipython_execute(tmpdir):

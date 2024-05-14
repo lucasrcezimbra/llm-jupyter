@@ -24,7 +24,7 @@ Issues = "https://github.com/lucasrcezimbra/llm-jupyter/issues"
 CI = "https://github.com/lucasrcezimbra/llm-jupyter/actions"
 
 [project.entry-points.llm]
-python = "llm_jupyter"
+python = "llm_jupyter.commands"
 
 [project.optional-dependencies]
 test = ["pytest"]

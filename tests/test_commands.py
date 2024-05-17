@@ -1,3 +1,5 @@
+import re
+
 from click.testing import CliRunner
 from llm.cli import cli
 
@@ -26,6 +28,18 @@ def test_ipython_help(capfd):
 
     captured = capfd.readouterr()
     assert captured.out.startswith("=========\n IPython\n========")
+
+
+def test_auto_load_extension(capfd):
+    runner = CliRunner()
+
+    runner.invoke(cli, ["ipython", "-c", "%llm --help"])
+
+    captured = capfd.readouterr()
+    assert re.match(
+        r"^usage: .* \[-h\] \[--print\] \[--model MODEL\] \[--system SYSTEM\]",
+        captured.out,
+    )
 
 
 def test_jupyter(capfd):

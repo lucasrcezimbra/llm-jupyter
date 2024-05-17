@@ -12,7 +12,7 @@ def register_commands(cli):
         """
         Run IPython interpreter, passing through any arguments
         """
-        subprocess.run(["ipython", *args])
+        subprocess.run(["ipython", *args, "--ext", "llm_jupyter.magic"])
 
     @cli.command(context_settings={"ignore_unknown_options": True})
     @click.argument("args", nargs=-1, type=click.UNPROCESSED)

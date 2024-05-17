@@ -36,6 +36,21 @@ In [1]: %llm 'Who are you?'
 
 # LLM output will be set as the next input
 In [2]: print("I am a Python programmer using Jupyter Notebook.")
+I am a Python programmer using Jupyter Notebook.
+
+In [3]: %llm --help
+usage: __main__.py [-h] [--print] [--model MODEL] [--system SYSTEM] [prompt ...]
+
+positional arguments:
+  prompt                Prompt to use
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --print, -p           Only print the output
+  --model MODEL, -m MODEL
+                        Model to use
+  --system SYSTEM, -s SYSTEM
+                        System prompt to use
 ```
 
 https://github.com/lucasrcezimbra/llm-jupyter/assets/7042915/b7f8a9ec-d269-4b24-bac3-a01ad6802032

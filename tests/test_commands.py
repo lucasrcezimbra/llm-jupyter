@@ -1,5 +1,4 @@
 import re
-import sys
 
 from click.testing import CliRunner
 from llm.cli import cli
@@ -52,20 +51,3 @@ def test_jupyter(capfd):
     assert captured.out.startswith(
         "Jupyter Notebook - A web-based notebook environment for interactive computing"
     )
-
-
-def test_jupyter_auto_load_extension(mocker):
-    run_mock = mocker.patch("llm_jupyter.commands.subprocess.run")
-    runner = CliRunner()
-
-    result = runner.invoke(cli, ["notebook", "--help-all"])
-
-    assert result.exit_code == 0
-    assert run_mock.call_args.args[0] == [
-        sys.executable,
-        "-m",
-        "notebook",
-        "--help-all",
-        "--ext",
-        "llm_jupyter.magic",
-    ]

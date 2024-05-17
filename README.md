@@ -46,6 +46,8 @@ llm notebook
 ```
 
 ```python
+%load_ext llm_jupyter.magic
+
 %llm 'Who are you?'
 
 # LLM output will be set as the next input

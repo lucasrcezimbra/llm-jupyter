@@ -31,8 +31,10 @@ llm ipython
 ```
 
 ```python
-In [1]: !llm 'Who are you?'
-# Output: I am an AI digital assistant here to help you with any questions or tasks you may have. How can I assist you today?
+In [1]: %llm 'Who are you?'
+
+# LLM output will be set as the next input
+In [2]: print("I am a Python programmer using Jupyter Notebook.")
 ```
 
 
@@ -44,8 +46,10 @@ llm notebook
 ```
 
 ```python
-!llm 'Who are you?'
-# Output: I am an AI digital assistant here to help you with any questions or tasks you may have. How can I assist you today?
+%llm 'Who are you?'
+
+# LLM output will be set as the next input
+print("I am a Python programmer using Jupyter Notebook.")
 ```
 
 ## Development

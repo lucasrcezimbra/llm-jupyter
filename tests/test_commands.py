@@ -1,4 +1,5 @@
 import re
+import sys
 
 from click.testing import CliRunner
 from llm.cli import cli
@@ -61,7 +62,8 @@ def test_jupyter_auto_load_extension(mocker):
 
     assert result.exit_code == 0
     assert run_mock.call_args.args[0] == [
-        "jupyter",
+        sys.executable,
+        "-m",
         "notebook",
         "--help-all",
         "--ext",

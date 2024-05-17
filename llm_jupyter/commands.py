@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 import click
 import llm
@@ -12,7 +13,9 @@ def register_commands(cli):
         """
         Run IPython interpreter, passing through any arguments
         """
-        subprocess.run(["ipython", *args, "--ext", "llm_jupyter.magic"])
+        subprocess.run(
+            [sys.executable, "-m", "IPython", *args, "--ext", "llm_jupyter.magic"]
+        )
 
     @cli.command(context_settings={"ignore_unknown_options": True})
     @click.argument("args", nargs=-1, type=click.UNPROCESSED)
@@ -20,4 +23,6 @@ def register_commands(cli):
         """
         Run Jupyter Notebook, passing through any arguments
         """
-        subprocess.run(["jupyter", "notebook", *args, "--ext", "llm_jupyter.magic"])
+        subprocess.run(
+            [sys.executable, "-m", "notebook", *args, "--ext", "llm_jupyter.magic"]
+        )

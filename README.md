@@ -5,9 +5,7 @@
 [![Tests](https://github.com/lucasrcezimbra/llm-jupyter/workflows/Test/badge.svg)](https://github.com/lucasrcezimbra/llm-jupyter/actions?query=workflow%3ATest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/lucasrcezimbra/llm-jupyter/blob/main/LICENSE)
 
-Run a IPython interpreter in the LLM virtual environment
-
-https://github.com/lucasrcezimbra/llm-jupyter/assets/7042915/66590bb9-0155-47d3-a46f-a883b2cef88b
+Run a IPython interpreter in the [LLM](https://github.com/simonw/llm) virtual environment
 
 ## Installation
 
@@ -40,6 +38,8 @@ In [1]: %llm 'Who are you?'
 In [2]: print("I am a Python programmer using Jupyter Notebook.")
 ```
 
+https://github.com/lucasrcezimbra/llm-jupyter/assets/7042915/b7f8a9ec-d269-4b24-bac3-a01ad6802032
+
 
 ### Notebook
 This plugin also adds a new `notebook` command to LLM. This executes a Jupyter Notebook in the same virtual environment as LLM itself.
@@ -56,6 +56,8 @@ llm notebook
 # LLM output will be set as the next input
 print("I am a Python programmer using Jupyter Notebook.")
 ```
+
+https://github.com/lucasrcezimbra/llm-jupyter/assets/7042915/58c63b2e-3a7b-43f1-b0aa-ab3daf2e9810
 
 ## Development
 

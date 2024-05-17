@@ -7,10 +7,13 @@
 
 Run a IPython interpreter in the LLM virtual environment
 
+https://github.com/lucasrcezimbra/llm-jupyter/assets/7042915/66590bb9-0155-47d3-a46f-a883b2cef88b
+
 ## Installation
 
 Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 ```bash
+pipx install llm
 llm install llm-jupyter
 ```
 ## Usage

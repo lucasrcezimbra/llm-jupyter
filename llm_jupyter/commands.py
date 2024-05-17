@@ -20,4 +20,4 @@ def register_commands(cli):
         """
         Run Jupyter Notebook, passing through any arguments
         """
-        subprocess.run(["jupyter", "notebook", *args])
+        subprocess.run(["jupyter", "notebook", *args, "--ext", "llm_jupyter.magic"])

@@ -30,7 +30,7 @@ def test_ipython_help(capfd):
     assert captured.out.startswith("=========\n IPython\n========")
 
 
-def test_auto_load_extension(capfd):
+def test_ipython_auto_load_extension(capfd):
     runner = CliRunner()
 
     runner.invoke(cli, ["ipython", "-c", "%llm --help"])
@@ -51,3 +51,19 @@ def test_jupyter(capfd):
     assert captured.out.startswith(
         "Jupyter Notebook - A web-based notebook environment for interactive computing"
     )
+
+
+def test_jupyter_auto_load_extension(mocker):
+    run_mock = mocker.patch("llm_jupyter.commands.subprocess.run")
+    runner = CliRunner()
+
+    result = runner.invoke(cli, ["notebook", "--help-all"])
+
+    assert result.exit_code == 0
+    assert run_mock.call_args.args[0] == [
+        "jupyter",
+        "notebook",
+        "--help-all",
+        "--ext",
+        "llm_jupyter.magic",
+    ]

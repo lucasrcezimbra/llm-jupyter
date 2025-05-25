@@ -24,7 +24,7 @@ def test_custom_model():
 
     ipy.run_line_magic("llm", "--model length-summary 'This has 17 chars'")
 
-    assert ipy.rl_next_input == "System: 331 - Prompt: 17"
+    assert ipy.rl_next_input == "System: 330 - Prompt: 17"
 
 
 def test_print(capsys):
@@ -33,7 +33,7 @@ def test_print(capsys):
     ipy.run_line_magic("llm", "--print --model length-summary 'This has 17 chars'")
 
     captured = capsys.readouterr()
-    assert captured.out == "System: 331 - Prompt: 17\n"
+    assert captured.out == "System: 330 - Prompt: 17\n"
 
 
 def test_custom_model_and_system():

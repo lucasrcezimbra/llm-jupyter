@@ -18,7 +18,7 @@ You return only: print(x)
 """
 
 
-def llm(line):
+def llm(line, cell=None):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--print",
@@ -43,7 +43,7 @@ def llm(line):
     if model.needs_key:
         model.key = get_key(None, model.needs_key, model.key_env_var)
 
-    prompt = " ".join(args.prompt)
+    prompt = cell.strip() if cell else " ".join(args.prompt)
     response = model.prompt(prompt, system=args.system).text()
 
     if args.print:
@@ -53,4 +53,4 @@ def llm(line):
 
 
 def load_ipython_extension(ipython):
-    ipython.register_magic_function(llm, "line")
+    ipython.register_magic_function(llm, "line_cell")
